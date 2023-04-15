@@ -1,0 +1,16 @@
+<div>
+    <h3>{{ knowledgeArea }} skills:</h3>
+</div>
+<ul class="skill_items">
+    <li *ngFor="let skill of allSkills | async">
+        <nav>
+            <a routerLink="/knowledgearea/{{knowledgeArea}}/skill/{{skill.name}}">{{skill.name}}</a>
+        </nav>
+    </li>
+</ul>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="name">Add Skill:</label>
+    <input type="text" id="name" formControlName="name">
+    <br>
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>

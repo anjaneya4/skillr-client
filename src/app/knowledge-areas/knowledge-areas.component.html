@@ -1,0 +1,10 @@
+<h2>
+  My Knowledge Areas:
+</h2>
+<ul class="knowledgeAreas">
+  <li *ngFor="let knowledgeArea of knowledgeAreas">
+    <nav>
+      <a routerLink="/knowledgearea/{{knowledgeArea.name}}">{{knowledgeArea.name}}</a>
+    </nav>
+  </li>
+</ul>
